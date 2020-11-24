@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+ <html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tomasz Cygal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=IM+Fell+French+Canon+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-sm fixed-top custom-navbar ">
+            <div>
+                <a href="index.html" class="pull-left"> <img class="logo"src="assets/images/logo.png"></a> 
+            </div>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto custom-ul">
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="portfolio.html">Portfolio <span class="sr-only"></span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="about.html">About<span class="sr-only"></span></a>
+                    </li>
+                                       
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="blog.html">Blog<span class="sr-only"></span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="contact.html">Contact<span class="sr-only"></span></a>
+                    </li>
+                    
+                </ul>
+            </div>
+    </nav>
+<section contact-page>
+
+    <div class="contact-wrapper bg-position height-100vh">
+        <div class="color-overlay"></div>
+        
+<section class="contact-section flex flex-column text-white">
+
+  <div class="flex flex-column">  
+  
+    <h2>Contact</h2>
+    <p class="letter-spacing">Do you have any questions? Please do not hesitate to contact me directly.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+>
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea subject-content"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <div class="flex ">
+                <a class="btn button" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+     
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><a class="links" href="https://www.google.com/maps/place/Dublin/@50.2516765,-1.2359214,2414917m/data=!3m1!1e3!4m5!3m4!1s0x48670e80ea27ac2f:0xa00c7a9973171a0!8m2!3d53.3498053!4d-6.2603097" target="_blank" ><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>Dublin, IRL</p></a>
+                </li>
+
+                <li><a class="links" href="tel:+353862698698" ><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+353862698698</p></a>
+                </li>
+
+                <li><a class="links"href="mailto:tomaszcygal@yahoo.com?Subject=Iterview%20invitation" ><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>tomaszcygal@yahoo.com</p></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+</section>
+
+        <footer class="footer-container bg-transparent">
+            <div class="flex text-center flex-wrap text-white">
+                <div class="col-sm-4 copyright">
+                    <p class="inline-block">
+                        Tomasz Cygal 2020
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="inline-block">
+                        Print my CV here
+                        <a href="/assets/images/cv.pdf" target="_blank" class="links">
+                        <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Download link.</span>
+                    </a>
+                    </p>
+                </div>
+                <div class="col-sm-4 footer-container">
+                    <ul class="list-inline links">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="" class="links">
+                            <i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a target="_blank" href="" class="links">
+                            <i class="fab fa-twitter fa-2x " aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="" class="links">
+                            <i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only">You Tube</span>
+                            </a>
+                        </li>
+    
+                        <li class="list-inline-item">
+                            <a href="" target="_top" class="links">
+                            <i class="fas fa-at fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only" id="e-mail">e-Mail</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </div>
+    
+</section>
+    </body>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+ <html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tomasz Cygal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=IM+Fell+French+Canon+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-sm fixed-top custom-navbar ">
+              <div>
+                <a href="index.html" class="pull-left"> <img class="logo"src="assets/images/logo.png"></a> 
+            </div>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto custom-ul">
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="portfolio.html">Portfolio <span class="sr-only"></span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="about.html">About<span class="sr-only"></span></a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="blog.html">Blog<span class="sr-only"></span></a>
+                    </li>
+                                        
+                    <li class="nav-item active">
+                        <a class="nav-link btn-action" href="contact.html">Contact<span class="sr-only"></span></a>
+                    </li>
+                    
+                </ul>
+            </div>
+    </nav>
+    
+        <section about-page>
+            <div class="about bg-position height-100vh">
+                .<div class="color-overlay"></div>
+                <div class="flex flex wrap col-md-12">
+                    <h2 class="about_header text-center"><strong> My Passions <br>&<br>
+                    Personality.</strong></h2>
+                </div>      
+            </div>
+            <div class="map-responsive" id="map" style="width: 100%; height: 500px;"></div>
+        </section> 
+    <footer class="footer-container">
+        <div class="flex text-center flex-wrap">
+            <div class="col-sm-4 copyright">
+                <p class="inline-block text-white">
+                    Tomasz Cygal 2020
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p class="inline-block text-white">
+                    Print my CV here
+                    <a href="/assets/images/cv.pdf" target="_blank" class="links">
+                    <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+                    <span class="sr-only">Download link.</span>
+                </a>
+                </p>
+            </div>
+            <div class="col-sm-4 ">
+                <ul class="list-inline links">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/tomasz.cygal.96" class="links">
+                        <i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.linkedin.com/in/tomasz-cygal-791830180/" class="links">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                        <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://github.com/tomciosegal" target="_top" class="links">
+                        <i class="fab fa-github fa-2x"></i>
+                        <span class="sr-only" id="github">Github</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="" class="links">
+                        <i class="fas fa-at fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only" id="e-mail">e-Mail</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDPPwdEZWXjfqIe3ZLLmOa4VTwJ0X2_tlI"  type="text/javascript"></script>
+    <script>
+         const locations = [
+            ['Crete', 35.2731181, 24.4919706],
+            ['Athens', 37.9908997,23.70332],
+            ['Maurtius', -20.392554,57.0959745],
+            ['Bangkok', 13.7248936,100.4930261],
+            ['Phi Phi Island', 7.7377891,98.706876],
+            ['Phuket', 7.8309254,98.0797405]
+        ];
+
+        const map_div = document.querySelector('#map');
+        const map = new google.maps.Map(map_div, {
+            center: new google.maps.LatLng(52.254547, 20.989675),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoom: 1,
+        });
+
+        const infoWindow = new google.maps.InfoWindow();
+
+        for(let i = 0; i < locations.length; i++){
+            const marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(locations[i][1], locations[i][2])
+            });
+
+            google.maps.event.addListener(marker, 'click', function(){
+                infoWindow.setContent(locations[i][0]);
+                infoWindow.open(map, marker);
+
+                map.setZoom(10);
+                map.setCenter(marker.getPosition());
+            })
+        }
+
+        </script>
+
+    </body>
+</html>

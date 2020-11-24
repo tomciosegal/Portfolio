@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+ <html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tomasz Cygal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=IM+Fell+French+Canon+SC&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-sm fixed-top custom-navbar ">
+                <div>
+                    <a href="/" class="pull-left"> <img class="logo"src="assets/images/logo.png"/></a> 
+                </div>
+                <button class="navbar-toggler collapsed custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto custom-ul">
+                        <li class="nav-item active">
+                            <a class="nav-link btn-action" href="portfolio.html">Portfolio <span class="sr-only"></span></a>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link btn-action" href="about.html">About<span class="sr-only"></span></a>
+                        </li>
+                                        
+                        <li class="nav-item active">
+                            <a class="nav-link btn-action" href="blog.html">Blog<span class="sr-only"></span></a>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <a class="nav-link btn-action" href="contact.html">Contact<span class="sr-only"></span></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+
+<section class="front-page"> 
+    <div class="blog bg-position">
+    <div class="color-overlay"></div>
+        <div class="container">
+            <div class="flex flex-wrap space-around flex-column">
+                <div class="blog_image_wrapper">
+                    <img class="image" id="image"/>
+                </div>
+              <div class="text-center flex flex-column text-white">
+                <p class="" id="title"></p>
+                <p class="" id="lead"></p>
+                <p class="" id="content"></p>
+                <p class="" id="date"></p>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!--Footer-->
+
+    <footer class="footer-container">
+        <div class="flex text-center flex-wrap">
+            <div class="col-sm-4 copyright">
+                <p class="inline-block text-white">
+                    Tomasz Cygal 2020
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p class="inline-block text-white">
+                    Print my CV here
+                    <a href="/assets/images/cv.pdf" target="_blank" class="links">
+                    <i class="fa fa-download fa-2x" aria-hidden="true"></i>
+                    <span class="sr-only">Download link.</span>
+                </a>
+                </p>
+            </div>
+            <div class="col-sm-4 ">
+                <ul class="list-inline links">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.facebook.com/tomasz.cygal.96" class="links">
+                        <i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://www.linkedin.com/in/tomasz-cygal-791830180/" class="links">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                        <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="https://github.com/tomciosegal" target="_top" class="links">
+                        <i class="fab fa-github fa-2x"></i>
+                        <span class="sr-only" id="github">Github</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a target="_blank" href="" class="links">
+                        <i class="fas fa-at fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only" id="e-mail">e-Mail</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+     
+        
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+    <script>
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyB5x17MeRrma1XPPsO5ILyX-8xiAmNncaE",
+            authDomain: "blog-ad72f.firebaseapp.com",
+            databaseURL: "https://blog-ad72f.firebaseio.com",
+            projectId: "blog-ad72f",
+            storageBucket: "blog-ad72f.appspot.com",
+            messagingSenderId: "568653500752",
+            appId: "1:568653500752:web:8d56bdae093703b4759c55"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        const url = new URL(location.href);
+        const id = url.searchParams.get('id');
+
+        const post = firebase.database().ref().child('posts').child(id);
+
+        post.once('value').then(data => {
+            const date = new Date(data.val().date);
+
+            document.querySelector('#title').innerHTML = data.val().title;
+            document.querySelector('#lead').innerHTML = data.val().lead;
+            document.querySelector('#content').innerHTML = data.val().content;
+            document.querySelector('#date').innerHTML =`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+            document.querySelector('#image').src = data.val().image;
+       })
+           
+    </script>
+
+
+    </body>
+ </html>
