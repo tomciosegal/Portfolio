@@ -52,3 +52,30 @@ if(document.querySelector('#add_post')){
     document.querySelector('#add_post').addEventListener('click', posts.create);
 }
 
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB5x17MeRrma1XPPsO5ILyX-8xiAmNncaE",
+    authDomain: "blog-ad72f.firebaseapp.com",
+    databaseURL: "https://blog-ad72f.firebaseio.com",
+    projectId: "blog-ad72f",
+    storageBucket: "blog-ad72f.appspot.com",
+    messagingSenderId: "568653500752",
+    appId: "1:568653500752:web:8d56bdae093703b4759c55"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const url = new URL(location.href);
+const id = url.searchParams.get('id');
+
+const post = firebase.database().ref().child('posts').child(id);
+
+post.once('value').then(data => {
+    const date = new Date(data.val().date);
+
+    document.querySelector('#title').innerHTML = data.val().title;
+    document.querySelector('#lead').innerHTML = data.val().lead;
+    document.querySelector('#content').innerHTML = data.val().content;
+    document.querySelector('#date').innerHTML =`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+    document.querySelector('#image').src = data.val().image;
+})
