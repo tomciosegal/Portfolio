@@ -241,7 +241,7 @@ a:link {
   left: 22%;
   top: 70px;
   position: absolute;
-  display: none;
+  /* display: none; */
 }
 
 .image_wrapper {
@@ -559,7 +559,7 @@ hr {
   width: 250px;
   height: 250px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .hexagon_img {
   height: 100%;
@@ -728,10 +728,12 @@ hr {
 
   .image_wrapper {
     width: 90%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .project_img {
-    width: 100%;
+    width: 90%;
     height: 350px;
   }
 
