@@ -213,9 +213,11 @@ a:link {
 }
 
 .project_img {
-  width: 95%;
+  width: 100%;
   height: 260px;
+  object-fit: cover;
 }
+
 .project_img:hover {
   background: black;
   z-index: 1;
@@ -238,7 +240,8 @@ a:link {
 
 .image_caption {
   text-align: center;
-  left: 22%;
+  left: 50%;
+  transform: translateX(-50%);
   top: 70px;
   position: absolute;
   /* display: none; */
@@ -608,7 +611,6 @@ hr {
 }
 
 .bullet {
-  height: 60px;
   width: 20%;
 }
 
@@ -704,6 +706,10 @@ hr {
     width: 100%;
   }
 
+  .main-skill-icon{
+    display: none;
+  }
+
   .portfolio_page > .container .flex{
       flex-direction: row;
   }
@@ -718,6 +724,8 @@ hr {
   .blog-link {
     width: 40%;
   }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -733,7 +741,7 @@ hr {
   }
 
   .project_img {
-    width: 90%;
+    width: 100%;
     height: 350px;
   }
 
